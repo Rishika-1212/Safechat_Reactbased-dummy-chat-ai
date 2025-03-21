@@ -1,0 +1,72 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-cyber-dark text-cyber-light;
+  }
+}
+
+@layer utilities {
+  .cyber-gradient {
+    @apply bg-gradient-to-r from-cyber-primary via-cyber-secondary to-cyber-accent;
+  }
+  
+  .cyber-border {
+    @apply border-2 border-cyber-primary shadow-[0_0_10px_#00ff9f];
+  }
+  
+  .cyber-panel {
+    @apply bg-cyber-dark/80 backdrop-blur-md border-cyber-primary rounded-lg shadow-lg;
+  }
+  
+  .cyber-text {
+    @apply font-mono tracking-wide;
+  }
+}
+
+.floating-bot {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.chat-container {
+  position: fixed;
+  bottom: 6rem;
+  right: 2rem;
+  width: 350px;
+  max-height: 500px;
+  z-index: 999;
+}
